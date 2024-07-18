@@ -1,0 +1,80 @@
+.container{
+    margin: 2rem;
+}
+
+.open-sans-font {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.players{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    margin-bottom: 5%;
+    border-radius: 5%;
+    
+}
+
+.player:hover{
+    background-color: #F9EBEA;
+}
+
+.player button{
+    margin: .5em;
+}
+
+.player button:hover{
+    background-color: #CD6155;
+}
+
+.lineUp{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50vh;
+    background-color: #D6DBDF;
+    margin-bottom: 2rem;
+}
+
+.titular{
+    background-color: #CD6155;
+    text-align: center;
+    color: white;
+    padding: .2em;
+    border-radius: 12px;
+    height: 30%;
+    width: 20%;
+}
+.player{
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+.addPlayer{
+    display:flex;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.addPlayer form{
+    display:flex;
+}
+
+.btn-register{
+    background-color: #5DADE2;
+    color: white;
+    padding: .5em;
+    border-radius: 5%;
+    border-style: none;
+}
+
+.input{
+    margin: 0rem 1rem;
+    padding: .5em;
+}
