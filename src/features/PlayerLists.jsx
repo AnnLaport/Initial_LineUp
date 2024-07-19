@@ -13,7 +13,7 @@ export default function PlayerLists(){
         <div className="player" key={player.name}>
             <h3>{player.name}</h3>
             <p>{player.number}-{player.position}</p>
-            <button onClick={()=>dispatch(addTitular(player.name, player.number, player.position))}>Titular</button>
+            <button onClick={()=>{dispatch(addTitular(player.name, player.number, player.position)); dispatch(deletePlayer(player.number))}}>Titular</button>
             <button onClick={()=>dispatch(deletePlayer(player.number))}>Eliminar</button>
         </div>
     ))

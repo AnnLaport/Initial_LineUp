@@ -12,11 +12,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const PlayerSlice= createSlice({
     name: 'players',
-    initialState,
+    initialState: initialState.sort((a,b)=>a.name.localeCompare(b.name)),
     reducers: {
         playerAdded: {
             reducer(state, action){
                 state.push(action.payload);
+                state=state.sort((a,b)=>a.name.localeCompare(b.name))
             },
             prepare(name, number, position){
                 return {

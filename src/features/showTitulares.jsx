@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { deleteTitular } from "./titularSlice";
+import { playerAdded } from "./playerSlice";
 
 
 export default function ShowTitulares(){
@@ -11,7 +12,7 @@ export default function ShowTitulares(){
         <div className="titular" key={titular.name}>
             <h3>{titular.name}</h3>
             <p>{titular.number}-{titular.position}</p>
-            <button onClick={()=>dispatch(deleteTitular(titular.number))}>Bench</button>
+            <button onClick={()=>{dispatch(playerAdded(titular.name, titular.number, titular.position)); dispatch(deleteTitular(titular.number))}}>Bench</button>
         </div>
     ))
 
