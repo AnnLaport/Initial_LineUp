@@ -1,13 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
     const initialState=[
-        {name: "Simon Kjaer", number: 8, position:"defence"},
+        {name: "Simon Kjaer", number: 8, position:"defense"},
         {name: "Theo Hernandez", number: 5, position:"winger"},
-        {name: "Matteo Gabbia", number: 46, position:"defence"},
+        {name: "Matteo Gabbia", number: 46, position:"defense"},
         {name: "Christian Pulisic", number: 10, position:"playmaker"},
         {name: "Yacine Adli", number: 7, position:"midfield"},
         {name: "Zlatan Ibrahimovic", number: 11, position:"forward"},
-        {name: "Andriy Shevchenko", number: 19, position:"forward"}
+        {name: "Andriy Shevchenko", number: 19, position:"forward"},
+        {name: "Paolo Maldini", number: 2, position:"defense"},
+        {name: "Rafael Leao", number: 12, position:"forward"}
     ]
 
 const PlayerSlice= createSlice({
