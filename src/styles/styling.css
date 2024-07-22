@@ -105,6 +105,12 @@
     padding: .5em;
 }
 
+#nameAd, #numberAd,#positionAd{
+    visibility:hidden;
+    color: red;
+    font-size: x-small;
+}
+
 @media only screen and (max-width: 800px){
     .addPlayer{
         flex-direction: column;
