@@ -9,7 +9,10 @@ import { createSlice } from "@reduxjs/toolkit";
         {name: "Zlatan Ibrahimovic", number: 11, position:"forward"},
         {name: "Andriy Shevchenko", number: 19, position:"forward"},
         {name: "Paolo Maldini", number: 2, position:"defense"},
-        {name: "Rafael Leao", number: 12, position:"forward"}
+        {name: "Rafael Leao", number: 12, position:"forward"},
+        {name: "Ignazio Abate", number: 3, position:"defense"},
+        {name: "Jack Bonaventura", number: 13, position: "midfield"},
+        {name: "Aymeric Laporte", number: 111, position:"defense"}
     ]
 
 const PlayerSlice= createSlice({

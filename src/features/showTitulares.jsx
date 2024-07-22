@@ -9,7 +9,7 @@ export default function ShowTitulares(){
     const dispatch=useDispatch();
 
     const showLineup=titulares.map(titular=>(
-        <div className="titular" key={titular.name}>
+        <div className="titular" key={titular.number}>
             <h3>{titular.name}</h3>
             <p>{titular.number}-{titular.position}</p>
             <button onClick={()=>{dispatch(playerAdded(titular.name, titular.number, titular.position)); dispatch(deleteTitular(titular.number))}}>Bench</button>

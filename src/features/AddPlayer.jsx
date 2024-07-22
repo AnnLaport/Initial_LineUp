@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { playerAdded } from "./playerSlice";
 
 export default function AddPlayer(){
@@ -14,10 +14,10 @@ export default function AddPlayer(){
     const validatename= document.getElementById("nameAd");
     const validatenumber=document.getElementById("numberAd");
     const validateposition=document.getElementById("positionAd");
+    const playersArray= useSelector(state=>state.players);
+    const titularsArray=useSelector(state=>state.titulares)
 
     const sendPlayer=()=>{
-
-
 
         if(justLetter.test(name) && justLetter.test(position) && justNumbers.test(number)){
 
@@ -26,7 +26,13 @@ export default function AddPlayer(){
             validateposition.style.visibility= "hidden";
 
             if(name && number && position){
-                dispatch(playerAdded(name, number, position));
+                const existence= playersArray.findIndex(player=> player.number===number)
+                const ontitulars=titularsArray.findIndex(titular=>titular.number===number)
+                if(existence===-1 && ontitulars===-1){
+                    dispatch(playerAdded(name, number, position));
+                }else{
+                    alert('Ya existe un jugador con ese dorsal!')
+                }
             }
         }else{
             alert('The data is not correct, check it out!');

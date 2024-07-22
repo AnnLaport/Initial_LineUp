@@ -6,6 +6,17 @@ import { deletePlayer } from "./playerSlice";
 export default function PlayerLists(){
 
     const dispatch=useDispatch();
+    const numTitulares= useSelector(state=>state.titulares.length);
+
+    function addPlayerIfOnly(name, number, position){
+        
+        if(numTitulares<11){
+            dispatch(addTitular(name, number, position)); 
+            dispatch(deletePlayer(number))
+        }else{
+            alert('Ya tienes once jugadores en tu cuadro titular!');
+        }
+    }
 
 
     const players= useSelector(state=>state.players);
@@ -13,7 +24,7 @@ export default function PlayerLists(){
         <div className="player" key={player.name}>
             <h3>{player.name}</h3>
             <p>{player.number}-{player.position}</p>
-            <button onClick={()=>{dispatch(addTitular(player.name, player.number, player.position)); dispatch(deletePlayer(player.number))}}>Titular</button>
+            <button onClick={()=>{addPlayerIfOnly(player.name,player.number,player.position)}}>Titular</button>
             <button onClick={()=>dispatch(deletePlayer(player.number))}>Eliminar</button>
         </div>
     ))
